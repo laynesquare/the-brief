@@ -4,8 +4,8 @@
 	"private": true,
 	"scripts": {
 		"dev": "remotion studio src/index.ts",
-		"render:short": "remotion render src/index.ts 20260901-001-MeghanMontecitoStaffing out/20260901-001-MeghanMontecitoStaffing/final.mp4 --bundle-cache=false --codec=h264 --crf=18 --audio-bitrate=192k",
-		"preview:short": "remotion render src/index.ts 20260901-001-MeghanMontecitoStaffing out/20260901-001-MeghanMontecitoStaffing/preview.mp4 --bundle-cache=false --scale=0.5 --codec=h264 --crf=24",
+		"render:short": "node scripts/render-short.mjs final",
+		"preview:short": "node scripts/render-short.mjs preview",
 		"check": "tsc --noEmit"
 	},
 	"dependencies": {

@@ -14,12 +14,12 @@ import {
 } from 'remotion';
 
 const FPS = 30;
-const DURATION = 1104;
+export const id = '20260901-001-MeghanMontecitoStaffing';
+export const durationInFrames = 1104;
 const GOLD = '#ffd22e';
 const INK = '#07090d';
 const WHITE = '#f8f7f1';
-const ASSETS = '20260901-001-MeghanMontecitoStaffing';
-const asset = (path: string) => staticFile(`${ASSETS}/${path}`);
+const asset = (path: string) => staticFile(`${id}/${path}`);
 
 type CaptionCue = {start: number; end: number; text: string};
 
@@ -55,7 +55,7 @@ const captions: CaptionCue[] = [
   {start: 35.25, end: 36.46, text: 'make it that hard to hire help?'},
 ];
 
-const sceneCuts = [0, 158, 411, 533, 676, 791, 911, DURATION];
+const sceneCuts = [0, 158, 411, 533, 676, 791, 911, durationInFrames];
 
 const clamp = {extrapolateLeft: 'clamp' as const, extrapolateRight: 'clamp' as const};
 
@@ -120,7 +120,7 @@ const Background = () => {
       {frame >= 533 && frame < 676 && <Still src={meghan} from={533} to={676} position="48% 35%" zoom={0.13} />}
       <Interview from={676} duration={115} startFrom={225} />
       {frame >= 791 && frame < 911 && <Still src={meghan} from={791} to={911} position="48% 36%" zoom={0.06} />}
-      {frame >= 911 && <Still src={couple} from={911} to={DURATION} position="44% 45%" zoom={0.09} />}
+      {frame >= 911 && <Still src={couple} from={911} to={durationInFrames} position="44% 45%" zoom={0.09} />}
       <AbsoluteFill style={{background: 'linear-gradient(180deg, rgba(5,7,10,.34) 0%, rgba(5,7,10,.03) 35%, rgba(5,7,10,.48) 66%, rgba(5,7,10,.94) 100%)'}} />
       <AbsoluteFill style={{boxShadow: 'inset 0 0 210px rgba(0,0,0,.62)'}} />
     </AbsoluteFill>
@@ -129,7 +129,7 @@ const Background = () => {
 
 const Kicker = () => {
   const frame = useCurrentFrame();
-  const progress = frame / (DURATION - 1);
+  const progress = frame / (durationInFrames - 1);
   return (
     <>
       <div style={{position: 'absolute', left: 58, right: 58, top: 54, height: 6, background: 'rgba(255,255,255,.22)', borderRadius: 8, overflow: 'hidden'}}>
@@ -138,7 +138,7 @@ const Kicker = () => {
       <div style={{position: 'absolute', top: 88, left: 58, display: 'flex', alignItems: 'center', gap: 18, fontWeight: 900, fontSize: 28, letterSpacing: 4}}>
         <span style={{width: 18, height: 18, borderRadius: 99, background: GOLD, boxShadow: `0 0 25px ${GOLD}`}} />
         THE BRIEF
-        <span style={{color: 'rgba(255,255,255,.55)', fontWeight: 600}}>• 20260901-001</span>
+        <span style={{color: 'rgba(255,255,255,.55)', fontWeight: 600}}>• {id}</span>
       </div>
       <div style={{position: 'absolute', top: 87, right: 58, border: '2px solid rgba(255,255,255,.48)', borderRadius: 999, padding: '8px 16px', fontWeight: 800, fontSize: 20, letterSpacing: 2, background: 'rgba(0,0,0,.28)'}}>
         REPORTED CLAIMS
