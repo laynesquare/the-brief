@@ -1,0 +1,23 @@
+For yt-dlp:
+
+"YOUTUBE_URL" is the video URL you want to download.
+-o source.mp4 means output filename. It tells yt-dlp to save the result as source.mp4.
+
+For FFmpeg:
+
+-ss 00:01:20 means seek/start at 1 minute 20 seconds.
+-to 00:01:27 means stop at 1 minute 27 seconds.
+-i source.mp4 means input file.
+-c copy means copy the existing audio/video streams without re-encoding.
+clip.mp4 is the output filename.
+
+
+yt-dlp \
+  -f "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4]" \
+  --merge-output-format mp4 \
+  -o "source.%(ext)s" \
+  "https://www.youtube.com/watch?v=1etA-kA7nbw"
+
+ffmpeg -ss 00:02:05 -to 00:02:15 \
+  -i source.mp4 \
+  -c copy clip.mp4

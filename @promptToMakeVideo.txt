@@ -1,0 +1,15 @@
+create youtube very engagin shorts using the public folder media of 
+
+/Users/cudisquare/development/repository/the-brief/public/20260921-002-EdSheeranSaysFamilyAbandonedHim
+
+and we have the audio already in /Users/cudisquare/development/repository/the-brief/public/20260921-002-EdSheeranSaysFamilyAbandonedHim/audio
+
+the whole transcript is in /Users/cudisquare/development/repository/the-brief/public/20260921-002-EdSheeranSaysFamilyAbandonedHim/script
+
+so i need subtitles
+
+refer to /Users/cudisquare/development/repository/the-brief/src/20260921-001-KateBeckinsaleCrypticPosts.tsx
+
+so the style is consistent
+
+the code should live inside /Users/cudisquare/development/repository/the-brief/src/20260921-002-EdSheeranSaysFamilyAbandonedHim.tsx

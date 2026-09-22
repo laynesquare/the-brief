@@ -1,0 +1,15 @@
+Create a YouTube Short using the following file as a visual reference to maintain a consistent style:
+
+/Users/cudisquare/development/repository/the-brief/src/20260901-001-MeghanMontecitoStaffing.tsx
+
+Use the audio from this directory and add accurately timed subtitles:
+
+/Users/cudisquare/development/repository/the-brief/public/20260921-001-KateBeckinsaleCrypticPosts/audio
+
+Use the images and other visual assets from this directory to create an engaging, dynamic video:
+
+/Users/cudisquare/development/repository/the-brief/public/20260921-001-KateBeckinsaleCrypticPosts/img
+
+In the Meghan video, the subtitles are partially covered by YouTube’s mobile interface, particularly the controls in the lower half of the screen. Please reposition the subtitles within the mobile-safe area so they remain clearly visible and unobstructed.
+
+The video’s duration should closely match the audio. Synchronize the visuals, transitions, and subtitles with the narration.

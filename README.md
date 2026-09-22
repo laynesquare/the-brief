@@ -2,6 +2,10 @@
 
 Remotion pipeline for editorial YouTube Shorts.
 
+## Editorial workflow
+
+Follow [`docs/YOUTUBE_SHORTS.md`](docs/YOUTUBE_SHORTS.md) to turn an article URL into a sourced, narrated Short.
+
 ## Start
 
 ```bash
