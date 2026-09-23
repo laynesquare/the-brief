@@ -1,4 +1,4 @@
-# YouTube Shorts Workflow
+# Agent-driven YouTube Shorts Workflow
 
 Input: one celebrity-news article URL.
 
@@ -63,8 +63,14 @@ Save only spoken narration to `public/<id>/script/script.txt`.
 
 ## 3. Audio, subtitles, and video
 
-- Generate approved narration with the ElevenLabs API and save it as `public/<id>/audio/narration.mp3`. Keep credentials in environment variables.
-- Confirm pronunciation and a runtime of 30 ~ 35 seconds.
+- Put `ELEVENLABS_API_KEY` in `.env` (optional: `ELEVENLABS_VOICE_ID`). Never commit credentials.
+- Generate narration:
+
+```bash
+npm run narrate -- <id>
+```
+
+Writes `public/<id>/audio/narration.mp3`. Confirm pronunciation and a runtime of 30 ~ 35 seconds.
 - Create `public/<id>/subtitles/narration.srt` from the final audio with Whisper.
 - Create `src/<id>.tsx`, following an existing Short for consistent visual style.
 - Match video duration to the audio and keep captions away from YouTube controls.

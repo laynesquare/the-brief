@@ -4,11 +4,13 @@
 	"private": true,
 	"scripts": {
 		"dev": "remotion studio src/index.ts",
+		"narrate": "node scripts/narrate.mjs",
 		"render:short": "node scripts/render-short.mjs final",
 		"preview:short": "node scripts/render-short.mjs preview",
 		"check": "tsc --noEmit"
 	},
 	"dependencies": {
+		"@elevenlabs/elevenlabs-js": "^2.68.0",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
 		"remotion": "^4.0.0"

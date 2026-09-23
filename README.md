@@ -19,6 +19,16 @@ npm run dev
 2. Matching assets: `public/<id>/...`
 3. Register it in `src/Root.tsx` `shorts` array
 
+## Narrate
+
+```bash
+# .env: ELEVENLABS_API_KEY=...
+# optional: ELEVENLABS_VOICE_ID=...
+npm run narrate -- 20260921-002-EdSheeranSaysFamilyAbandonedHim
+```
+
+Writes `public/<id>/audio/narration.mp3`.
+
 ## Render
 
 ```bash
