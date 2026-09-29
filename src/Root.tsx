@@ -1,8 +1,15 @@
 import { Composition } from 'remotion';
 import * as EdSheeranSaysFamilyAbandonedHim from './20260921-002-EdSheeranSaysFamilyAbandonedHim';
 
+import * as HarveyWeinsteinSentenced15Years from './20260923-001-HarveyWeinsteinSentenced15Years';
+
 // Add each new short here (file must export: id, durationInFrames, and the component).
 const shorts = [
+	{
+		id: HarveyWeinsteinSentenced15Years.id,
+		component: HarveyWeinsteinSentenced15Years.HarveyWeinsteinSentenced15Years,
+		durationInFrames: HarveyWeinsteinSentenced15Years.durationInFrames,
+	},
 	{
 		id: EdSheeranSaysFamilyAbandonedHim.id,
 		component: EdSheeranSaysFamilyAbandonedHim.EdSheeranSaysFamilyAbandonedHim,

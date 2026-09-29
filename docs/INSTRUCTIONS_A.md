@@ -1,6 +1,6 @@
-# Agent-driven YouTube Shorts Workflow
+# Agent-driven YouTube Shorts Workflow - Media
 
-Input: one celebrity-news article URL.
+Input: https://pagesix.com/2026/09/23/celebrity-news/harvey-weinstein-sentenced-to-15-years-in-prison-in-new-york-sexual-assault-case/
 
 Create the ID as:
 
@@ -49,37 +49,17 @@ HOOK → CONTEXT → EVIDENCE → COMPLICATION → PAYOFF → VIEWER QUESTION
 - Use short, conversational sentences
 - Add a new detail every 3–5 seconds
 - Place the CTA after the payoff
-- Separate facts from rumors
 - Provide original commentary
-- Credit reliable sources
+- First 3 seconds (Hook): Drop a bold claim, contrarian take, or open loop. Max 12 words. Zero intro fluff ("Hey guys", "Did you know").
+- Middle (3-20 sec): Deliver 2 rapid-fire value hits or proof points. Add a pattern interrupt at second 12.
+- Climax/Payoff (20-35 sec): Deliver the core insight or twist.
+- Outro/CTA (35-45 sec): Loop-friendly closing line + micro-CTA under 5 words.
 
 * No long introductions
 * No unnecessary sentences
 * No misleading hooks
 * No unedited third-party clips
 * No repetitive, mass-produced scripts
+* PLEASE USE LESS FORMAL LANGUAGE, make it conversational, looser voice.
 
 Save only spoken narration to `public/<id>/script/script.txt`.
-
-## 3. Audio, subtitles, and video
-
-- Put `ELEVENLABS_API_KEY` in `.env` (optional: `ELEVENLABS_VOICE_ID`). Never commit credentials.
-- Generate narration:
-
-```bash
-npm run narrate -- <id>
-```
-
-Writes `public/<id>/audio/narration.mp3`. Confirm pronunciation and a runtime of 30 ~ 35 seconds.
-- Create `public/<id>/subtitles/narration.srt` from the final audio with Whisper.
-- Create `src/<id>.tsx`, following an existing Short for consistent visual style.
-- Match video duration to the audio and keep captions away from YouTube controls.
-- Register the composition in `src/Root.tsx`.
-
-```bash
-npm run check
-npm run preview:short -- <id>
-npm run render:short -- <id>
-```
-
-Final output: `out/<id>/final.mp4`

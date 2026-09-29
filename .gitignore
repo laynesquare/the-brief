@@ -1,6 +1,5 @@
 node_modules
 out
-public/
 .env
 .DS_Store
 
