@@ -1,0 +1,34 @@
+whisper-cli \
+  -m "/Users/cudisquare/models/whisper/ggml-large-v3.bin" \
+  -f "./Timeline.wav" \
+  -l en \
+  --output-srt \
+  --output-file "./subtitles"
+
+
+  whisper-cli \
+  -m "/Users/cudisquare/models/whisper/ggml-large-v3.bin" \
+  -f "./Timeline.mp3" \
+  -l en \
+  -ml 1 \
+  --output-srt \
+  --output-file "./subtitles"
+
+
+  whisper-cli \
+  -m "/Users/cudisquare/models/whisper/ggml-large-v3.bin" \
+  -f "./Timeline.mp3" \
+  -l en \
+  --output-srt \
+  --output-file "./subtitles"
+
+
+whisperx "./Timeline.mp3" \
+  --model large-v3 \
+  --language en \
+  --device cpu \
+  --compute_type int8 \
+  --batch_size 1 \
+  --vad_method silero \
+  --output_format srt \
+  --output_dir "."
